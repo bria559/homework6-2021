@@ -143,11 +143,9 @@ header{
 @media only screen and (min-width: 850px){
 
 
-
-    header {
+    :not(.card) > header {
         flex-direction: row;
         justify-content:space-between;
-
         position: fixed;
         left: 0px;
         right: 0px;
@@ -155,17 +153,21 @@ header{
     };
 
     
+    /* .nav_links{ */
     .nav_links a{
+        color: pink;
         flex-direction: row;
         flex-wrap: nowrap;
-        /* align-content: space-around; */
-        /* justify-content: center; */
-        /* flex-flow: nowrap; */
+       align-self: baseline
 
     };
 
+    .card{
+        flex-flow: row nowrap;
+        flex-basis: 250px;
+    }
 
-
+    
 }
 
 @media (prefers-reduced-motion: reduce){
@@ -176,9 +178,11 @@ header{
 }
 
 @media (print){
+/* @media only screen and (min-width: 1000px){ */
+
     
     body{
-        background-image: none;        
+        background-image: none;
     }
     nav .nav_links{
         justify-content: space-between;
@@ -186,7 +190,7 @@ header{
     }
 
     .pricing{
-        align-items: flex-end;
+        align-items: baseline;
     }
 
     .card{
@@ -195,7 +199,10 @@ header{
     }
 
     .gallery{
-        visibility: hidden;
+        display: none;
+    }
+    #gallery{
+        display: none;
     }
 
 }
