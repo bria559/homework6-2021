@@ -1,6 +1,6 @@
 body{
 
-    font-family: "Alegreya Sans SC", 'serif';
+    font-family: "Alegreya Sans SC", serif;
     background-image: url("../images/concrete_seamless.png");
     background-color: #f1f1f1;
 }
@@ -14,6 +14,11 @@ header{
     flex-flow: column wrap;
     align-items: center;
     /* align-content: center; */
+}
+
+.nav_links{
+    display: flex;
+    flex-flow: column nowrap;
 }
 
 .nav_links a{
@@ -43,15 +48,15 @@ header{
 
 .pricing{
     display: flex;
-    flex-direction: column;
-    flex-flow: wrap;
+    /* flex-direction: column; */
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
 
 }
 
 .card{
-    display: flex; 
+    /* display: flex;  */
     flex-direction: column;
     flex-basis: 450px;
 }
@@ -143,6 +148,7 @@ header{
 @media only screen and (min-width: 850px){
 
 
+
     :not(.card) > header {
         flex-direction: row;
         justify-content:space-between;
@@ -152,15 +158,12 @@ header{
 
     };
 
-    
-    /* .nav_links{ */
-    .nav_links a{
-        color: pink;
-        flex-direction: row;
-        flex-wrap: nowrap;
-       align-self: baseline
-
+    .nav_links{
+        /* display: flex; */
+        flex-flow: row nowrap;
+        justify-content: space-between
     };
+    
 
     .card{
         flex-flow: row nowrap;
@@ -184,8 +187,11 @@ header{
     body{
         background-image: none;
     }
-    nav .nav_links{
-        justify-content: space-between;
+    .nav_links{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        /* justify-content: space-between; */
 
     }
 
